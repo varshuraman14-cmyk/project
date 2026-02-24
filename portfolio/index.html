@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/YOUR_OWN_KEY.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="image/logo.png.jpeg" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>UI/UX Designer</p>
+          <h1>Hi, I'm <span>Kevin</span><br />Jen Austraila</h1>
+        </div>
+      </div>
+    </div>
+    <!-- ---------about---------  -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="image/user.pgn.jpeg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, perferendis nulla corporis nemo veritatis provident
+              minima totam eum nostrum saepe eaque cum ratione sit commodi nisi
+              possimus aut ea. Magni accusantium autem fugit quam ipsum natus,
+              suscipit neque possimus? Reiciendis, soluta eligendi culpa commodi
+              exercitationem esse ea doloremque veniam voluptatum?Lorem, ipsum
+              dolor sit amet consectetur adipisicing elit. At distinctio quaerat
+              quasi qui sint consequatur est, eligendi saepe animi alias?
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('Expericence')">
+                Expericence
+              </p>
+              <p class="tab-links" onclick="opentab('Education' )">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI?UX</span><br />Designing Web/App interfaces</li>
+                <li><span>Web Development</span><br />Web App Development</li>
+                <li>
+                  <span>App Development</span><br />Building Android/ios app
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Expericence">
+              <ul>
+                <li>
+                  <span>2021- current</span><br />
+                  UI/UX Designing Training at ET Institute
+                </li>
+                <li><span>2019- 2021</span><br />Team lead at StarApp LLC.</li>
+                <li>
+                  <span>2017- 2019</span><br />UI/UX Design Excutive at coin
+                  Digital Ltd.
+                </li>
+                <li>
+                  <span>2016- 2017</span><br />Internship at ekart ecommerce.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li>
+                  <span>2016</span><br />UI/UX Design Training at ET Institute
+                </li>
+                <li><span>2016</span><br />MBA from MIT Bangalore</li>
+                <li><span>2014</span><br />BBA from ISM Bangalore</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  ----------services------->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fas fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Reprehenderit maiores, amet magni cupiditate cumque rerum velit,
+              vero illum incidunt quam distinctio minus deleniti repellendus
+              magnam est, inventore odit. Nobis, fugit!Lorem ipsum dolor sit
+              amet, consectetur adipisicing elit.
+            </p>
+            <a href="#">learn more</a>
+          </div>
+          <div>
+            <i class="fas fa-crop-alt"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae,
+              assumenda.Lorem ipsum dolor, sit amet consectetur adipisicing
+              elit. Perspiciatis saepe id, tenetur velit illum unde. Architecto
+              officia molestias eligendi error.Lorem ipsum dolor sit amet,
+              consectetur adipisicing
+            </p>
+            <a href="#">learn more</a>
+          </div>
+          <div>
+            <i class="fab fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus, inventore?Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Numquam at accusantium ullam laboriosam tempore
+              alias itaque quod facilis maiores veniam.
+            </p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
